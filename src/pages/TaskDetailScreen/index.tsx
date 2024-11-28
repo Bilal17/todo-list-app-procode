@@ -13,11 +13,9 @@ import { RootStackParamList } from '../../interfaces';
 type TaskDetailScreenProps = StackScreenProps<RootStackParamList, 'TaskDetail'>;
 
 const TaskDetailScreen: React.FC<TaskDetailScreenProps> = ({ route, navigation }) => {
-  // In a real app, you'd fetch the task details based on the taskId
   const { task,deleteTask } = route.params;
 
   const handleDelete = () => {
-    // Implement task deletion logic
     deleteTask(task.id)
     navigation.goBack();
   };
